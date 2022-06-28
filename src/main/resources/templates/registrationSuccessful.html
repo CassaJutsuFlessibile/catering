@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+ 
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>  
+	    <meta charset="ISO-8859-1" />
+	    <title>Societa' Catering</title>
+		<link rel="stylesheet" th:href="@{css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{css/index.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> 
+	 
+	<body> 
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div th:replace="fragments/base.html :: sfondo1"></div>
+		<div id="text">
+			<h3>La registrazione e' andata a buon fine!</h3>
+			<h3 class="button"><a th:href="@{/login}">Effettua l'accesso</a></h3>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:fragment="headerfiles(title)">
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+		<link th:href="@{/css/my-style.css}" rel="stylesheet">
+		<title>Catering</title>
+	</head>
+	<body>
+		<header th:fragment="intestazione">
+			<nav>
+				<div id="logo">
+					<a href="http://localhost:8082/home#">Catering</a>
+				</div>
+				<ul id="navigation">
+					<li class="nav-item"><a th:href="@{/home}">Home</a></li>
+					<li class="nav-item"><a href="http://localhost:8082/home#servizi">Servizi</a></li>
+					<li class="nav-item"><a href="http://localhost:8082/home#about">About</a>
+					<li class="nav-item"><a href="http://localhost:8082/home#contacts">Contattaci</a></li>
+					<li class="nav-item"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div th:fragment="sfondo1" id="sfondo1"></div>
+		<div th:fragment="sfondo2" id="sfondo2"></div>
+		<div th:fragment="sfondo3" id="sfondo3"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>  	
+		<meta charset="ISO-8859-1" />
+		<title>Dettagli Buffet</title>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/descrizioni.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">  
+	</head> 
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div id="sfondo-buffet"></div>
+		<div id="section">
+			<div class="section-item">
+					<div><strong>Nome: </strong>
+					<span th:text="${buffet.nome}">Buffet</span></div>
+					<div><strong>Descrizione: </strong>
+					<span th:text="${buffet.descrizione}">Descrizione</span></div>
+					<div><strong>Chef:</strong>
+					<span th:text="${buffet.chef}">Chef</span></div>
+			</div>
+			
+			<div class="section-item" th:if="${!buffet.piatti.empty}">
+				<div>Piatti presenti nel buffet:</div>
+				<ul>
+					<li th:each="piatto: ${buffet.piatti}">
+						<a href="piatto.html" th:href="@{'/piatto' + '/' + ${piatto.id}}"
+						   th:text="${piatto.nome}">Piatto</a>
+					</li>	   	
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

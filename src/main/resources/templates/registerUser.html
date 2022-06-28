@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>  
+	    <meta charset="ISO-8859-1" />
+	    <title>Societa' Catering</title>
+		<link rel="stylesheet" href="css/my-style.css"/>
+		<link rel="stylesheet" href="css/form.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> 
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div th:replace="fragments/base.html :: sfondo1"></div>
+		<div id="text">
+	    	
+		<form id="form" th:action="@{/register}" method="POST">
+			<div><h3>Registrati</h3></div>
+		        <div class="form-item">
+		            <div>Username</div>
+		            <div><input type="text" placeholder="username" required
+		                       th:field="${credentials.username}"/></div>
+		            <div th:if="${#fields.hasErrors('credentials.username')}"
+		                th:errors="${credentials.username}" th:style="'color:red'"></div>
+		        </div>
+		        <div class="form-item">
+		            <div>Password</div>
+		            <div><input type="password" placeholder="password" required
+		                       th:field="${credentials.password}"/></div>
+		            <div th:if="${#fields.hasErrors('credentials.password')}"
+		                th:errors="${credentials.password}" th:style="'color:red'"></div>
+		        </div>
+		        <div class="form-item">
+		            <div>Nome</div>
+		            <div><input type="text" placeholder="nome" required
+		                       th:field="${user.nome}"/></div>
+		            <div th:if="${#fields.hasErrors('user.nome')}"
+		                th:errors="${user.nome}" th:style="'color:red'"></div>
+		        </div>
+		        <div class="form-item">
+		            <div>Cognome</div>
+		            <div><input type="text" placeholder="cognome" required
+		                       th:field="${user.cognome}"/></div>
+		            <div th:if="${#fields.hasErrors('user.cognome')}"
+		                th:errors="${user.cognome}" th:style="'color:red'"></div>
+		        </div>
+		        <div class="button">
+		                <button type="submit">Registra</button>
+		        </div>
+		</form>
+		</div>
+	</body>
+</html>

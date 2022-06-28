@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>  	
+		<meta charset="ISO-8859-1" />
+		<title>Chef</title>
+		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	</head> 
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>	
+		
+		<div id="container">
+			<div><h1>Seleziona uno tra i nostri chef</h1></div>
+			<div id="section">
+				<ul id="elenco">
+					<li th:each="chef: ${chefs}">
+						<span>
+							<a href="chef.html" th:href="@{'/chef' + '/' + ${chef.id}}"
+					   		th:text="${chef.nome} + ' ' + ${chef.cognome}">Paolo Rossi</a>
+					   		<a th:href="@{'/admin' + '/chef' + '/' + ${chef.id} + '/newBuffet'}"><span id="select">Seleziona</span></a>
+					   	</span>
+					</li>	   	
+				</ul>
+				<img src="/images/chef.jpg"></img>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+#container {
+	position: absolute;
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+}
+
+#section {
+	margin: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+img {
+	width: 35%;
+	position: relative;
+	border-radius: 7px;
+}
+
+#elenco {
+	font-size: 18px;
+}
+
+#select {
+	font-size: smaller;
+	color: #ad043d;
+}
+
+#select:hover {
+	color: black;
+	font-weight: bold;
+}
+
+.section-item {
+	margin: 20px 0;
+}
+
+#button {
+	position: relative;
+	font-size: 18px;
+	padding: 3px;
+	border-style: solid;
+	color: white;
+	background-color: #ad043d;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+#button:hover {
+	color: #ad043d;
+	background-color: white;
+}

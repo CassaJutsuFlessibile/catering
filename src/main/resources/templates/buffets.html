@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>  	
+		<meta charset="ISO-8859-1" />
+		<title>Chef</title>
+		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> 
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>		
+		
+		<div id="container">
+			<div th:if="${chef != null}"><h1>I buffet dello chef <span th:text="${chef.nome} + ' ' + ${chef.cognome}"></span></h1></div>
+			<div th:if="${chef == null}"><h1>I nostri buffet</h1></div>
+			<div id="section">
+					<ul id="elenco">
+						<li th:each="buffet: ${buffets}">
+							<span>
+								<a href="buffet.html" th:href="@{'/buffet' + '/' + ${buffet.id}}"
+						   		th:text="${buffet.nome}">Buffet 1</a>
+						   	</span>
+						</li>	   	
+					</ul>
+				<img src="/images/buffet2.jpg"></img>
+			</div>
+		</div>
+	</body>
+
+</html>

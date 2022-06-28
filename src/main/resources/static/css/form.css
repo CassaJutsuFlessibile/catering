@@ -1,0 +1,31 @@
+#form{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 50px;
+}
+
+.form-item {
+	margin: 4px;
+}
+
+button {
+	position: relative;
+	font-size: 18px;
+	padding: 3px;
+	border-style: none;
+	color: white;
+	background-color: #ad043d;
+	border-radius: 3px;
+	margin: 10px;
+}
+
+button:hover {
+	color: #ad043d;
+	background-color: white;
+}
+
+h3 {
+	margin: 0 8px 15px 8px;
+}

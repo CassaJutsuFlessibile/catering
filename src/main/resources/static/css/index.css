@@ -1,0 +1,21 @@
+#welcome-text {
+	width: 60%;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	background-color: white;
+	padding: 30px;
+	opacity: 0.8;
+	border-radius: 7px;
+}
+
+.button {
+	border-style: solid;
+	border-radius: 3px;
+	border-color: #ad043d;
+	border-width: 0.1px;
+}
+
+h3.button {
+	margin: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+		<title>Inserimento buffet</title>
+		<link rel="stylesheet" th:href="@{/css/form.css}"/>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+	</head>
+	
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div th:replace="fragments/base.html :: sfondo3"></div>
+		<div id="text">
+			<form id="form" th:action="@{'/admin' + '/chef' + '/' + ${chef.id} + '/buffet'}" 
+			method="POST" th:object="${buffet}">
+				<div><h3>Inserisci un nuovo buffet</h3></div>
+				  <div th:if="${#fields.hasGlobalErrors()}">
+				    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p> 
+				  </div>			
+				<div class="form-item">
+					<div>Nome: </div>
+					<div><input type="text" th:field="*{nome}" required/></div>
+					<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+				</div>
+				<div class="form-item">
+					<div>Descrizione: </div>
+					<div><input type="text" th:field="*{descrizione}" required/></div>	
+					<div th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></div>
+				</div>
+				<div class="button">
+					<button type="submit">Conferma</button>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

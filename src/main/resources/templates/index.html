@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ 
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>  
+	    <meta charset="ISO-8859-1" />
+	    <title>Societa' Catering</title>
+		<link rel="stylesheet" th:href="@{css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{css/index.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> 
+	 
+	<body> 
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div th:replace="fragments/base.html :: sfondo1"></div>
+		<div id="welcome-text">
+			<h1>Offriamo servizi di catering per tutti i tuoi eventi.</h1>
+			<h2>Per saperne di piu' accedi o registrati</h2>
+			<div id="buttons">
+				<div class="button">
+					<a th:href="@{/login}">Accedi</a>
+			  	</div>
+				<div class="button">
+					<a th:href="@{/register}">Registrati</a>
+			  	</div>
+			</div>	  	
+		</div>
+ 	</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>  	
+		<meta charset="ISO-8859-1" />
+		<title>Dettagli Ingrediente</title>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/descrizioni.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">     
+	</head> 
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div id="sfondo-ingrediente"></div>
+		
+		<div id="section">
+				<div><strong>Nome: </strong>
+				<span th:text="${ingrediente.nome}">Ingrediente</span></div>
+				<div><strong>Origine: </strong>
+				<span th:text="${ingrediente.origine}">Origine</span></div>
+				<div><strong>Descrizione: </strong>
+				<span th:text="${ingrediente.descrizione}">Descrizione</span></div>
+		</div>
+	</body>
+
+</html>

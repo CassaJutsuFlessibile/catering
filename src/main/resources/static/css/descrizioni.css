@@ -1,0 +1,65 @@
+#sfondo-chef {
+	position:fixed;
+	background-image: url("../images/chef2.jpg");
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+
+#sfondo-buffet {
+	position:fixed;
+	background-image: url("../images/buffet2.jpg");
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+
+#sfondo-piatto {
+	position: fixed;
+	background-image: url("../images/piatto.jpg");
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+
+#sfondo-ingrediente {
+	position: fixed;
+	background-image: url("../images/ingrediente.jpg");
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+
+#section {
+	width: 50%;
+	position: absolute;
+	top: 30%;
+	left: 22%;
+	background-color: white;
+	opacity: 0.9;
+	padding: 60px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	border-radius: 7px;
+}
+
+.section-item {
+	padding: 15px 0;
+}
+
+#button {
+	background-color: white;
+	padding: 10px;
+	font-weight: bolder;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ad043d;
+	border-radius: 3px;
+}
+
+.section-item ul li {
+	list-style: circle;
+	padding: 0 10px;
+}
