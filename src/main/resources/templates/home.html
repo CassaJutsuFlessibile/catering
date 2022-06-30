@@ -1,46 +1,33 @@
 <!DOCTYPE html>
- 
+
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>  
-	    <meta charset="ISO-8859-1" />
-	    <title>Societa' Catering</title>
-		<link rel="stylesheet" th:href="@{css/my-style.css}"/>
-		<link rel="stylesheet" th:href="@{css/home.css}"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head> 
-	 
-	<body> 
-		<header th:replace="fragments/base.html :: intestazione"></header>
-		<div id="text-section">
-			<div id="servizi"><a name="servizi">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Asiatic Catering</title>
+<link rel="stylesheet" th:href="@{css/my-style.css}" />
+<link rel="stylesheet" th:href="@{css/home.css}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div id="text-section">
+		<div id="servizi">
+			<a name="servizi">
 				<div class="text-item">
-					<h2>Offriamo buffet di ogni tipo preparati dai nostri chef</h2>
-					<h3>Per saperne di piu' consulta i nostri buffet e i nostri chef</h3>
-				<div id="bottoni">
-					<div class="button">
-						<a th:href="@{/chefs}">I nostri chef</a>
-				  	</div>
-					<div class="button">
-						<a th:href="@{/buffets}">I nostri buffet</a>
-				  	</div>
-				</div>
-				</div>
-			</a></div>
-			<a name="about" id="about">	
-				<div class="text-item">
-					<h2>Esperienza decennale nel campo dei servizi catering</h2>
-					<h3>Se stai organizzando un evento, sei nel posto giusto</h3>
-				</div>
-			</a>	
-			<a name="contacts" id="contacts">
-				<div class="text-item">
-					<h2>Non esitare a contattarci</h2>
-					<h3>Per richiedere un preventivo scrivi al nostro indirizzo di posta elettronica: preventivi@catering.it</h3>
-					<h3>Oppure chiama il numero +39 123 456 7890</h3>
+					<div id="bottoni">
+						<div class="button">
+							<a th:href="@{/chefs}">Our Chefs</a>
+						</div>
+						<div class="button">
+							<a th:href="@{/buffets}">Our Buffets</a>
+						</div>
+					</div>
 				</div>
 			</a>
-			
 		</div>
-	</body>
+
+	</div>
+</body>
 
 </html>

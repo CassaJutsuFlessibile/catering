@@ -7,7 +7,7 @@
 }
 
 .form-item {
-	margin: 4px;
+	margin: 20px;
 }
 
 button {
@@ -15,10 +15,10 @@ button {
 	font-size: 18px;
 	padding: 3px;
 	border-style: none;
-	color: white;
-	background-color: #ad043d;
-	border-radius: 3px;
-	margin: 10px;
+	color: black;
+	background-color: #ffffff;
+	border-radius: 1px;
+	margin: 5px;
 }
 
 button:hover {

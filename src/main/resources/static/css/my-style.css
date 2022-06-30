@@ -2,7 +2,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Arial', fantasy;
 }
 
 a {
@@ -33,10 +33,11 @@ nav {
 }
 
 nav #logo {
-	font-weight: bold;
+	font-weight: bolder;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	font-size: 35px;
+	text-align: center;
 }
 
 nav #navigation {
@@ -92,9 +93,8 @@ a:hover {
 #sfondo3 {
 	position: fixed;
 	background-image: url(../images/sfondo3.jpg);
-	width: 100%;
-	height: 100vh;
-	background-size: cover;
+ 	max-width: 100%;
+ 	height: auto;
 	z-index: -1;
 }
 
@@ -107,7 +107,7 @@ a:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: white;
+	background-color: #fef8cb;
 	opacity: 0.95;
 	border-radius: 7px;
 	padding: 30px 0;
