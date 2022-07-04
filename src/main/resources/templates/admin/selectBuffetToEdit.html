@@ -13,14 +13,14 @@
 		<header th:replace="fragments/base.html :: intestazione"></header>	
 		
 		<div id="container">
-			<div><h1>Seleziona un buffet da modificare</h1></div>
+			<div><h1>Select a buffet to edit</h1></div>
 			<div id="section">
 				<ul id="elenco">
 					<li th:each="buffet: ${buffets}">
 						<span>
 							<a href="buffet.html" th:href="@{'/buffet' + '/' + ${buffet.id}}"
 					   		th:text="${buffet.nome}">Buffet 1</a>
-					   		<a th:href="@{'/admin' + '/editBuffet' + '/' + ${buffet.id}}"><span id="select">Modifica</span></a>
+					   		<a th:href="@{'/admin' + '/editBuffet' + '/' + ${buffet.id}}"><span id="select">Modify</span></a>
 					   	</span>
 					</li>	   	
 				</ul>

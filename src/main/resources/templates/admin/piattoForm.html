@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-		<title>Inserimento chef</title>
+		<title>Dish Insert</title>
 		<link rel="stylesheet" th:href="@{/css/form.css}"/>
 		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
@@ -15,24 +15,24 @@
 	
 		<div id="text">
 			<form id="form" th:action="@{/admin/piatto}" method="POST" th:object="${piatto}">
-				<div><h3>Inserisci un nuovo piatto</h3></div>
+				<div><h3>Insert a new dish</h3></div>
 				<div th:if="${#fields.hasGlobalErrors()}">
 				    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p> 
 				</div>
 				<div class="form-item">
-					<div>Nome: </div>
+					<div>Name: </div>
 					<div><input type="text" th:field="*{nome}" required/></div>
 					<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
 				</div>
 				
 				<div class="form-item">
-					<div>Descrizione: </div>
+					<div>Description: </div>
 					<div><input type="text" th:field="*{descrizione}" required/></div>
 					<div th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></div>	
 				</div>
 				
 				<div class="button">
-					<button type="submit">Conferma</button>
+					<button type="submit">Confirm</button>
 				</div>
 				
 			</form>

@@ -3,7 +3,7 @@
 
 <head>  	
 	<meta charset="ISO-8859-1" />
-		<title>Modifica buffet</title>
+		<title>Modify buffet</title>
 		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
 		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,31 +16,31 @@
 			<div>
 				<div>
 					<h1 th:text="${buffet.nome}">Buffet</h1>
-					<div>Descrizione: <span  th:text="${buffet.descrizione}">Descrizione</span></div>
+					<div>Description: <span  th:text="${buffet.descrizione}">Descrizione</span></div>
 				</div>	
-				<div class="section-item" th:if="${!buffet.piatti.empty}"><strong>Piatti presenti nel buffet:</strong>
+				<div class="section-item" th:if="${!buffet.piatti.empty}"><strong>Dishes in this buffet:</strong>
 					<ul>
 						<li th:each="piatto: ${buffet.piatti}">
 							<a href="piatto.html" th:href="@{'/piatto' + '/' + ${piatto.id}}"
 							   th:text="${piatto.nome}">Piatto</a>
 							 <a th:href="@{'/admin' + '/buffet' + '/' + ${buffet.id} + 
-								'/removePiatto' +'/' + ${piatto.id}}"><span id="select">Rimuovi</span></a>
+								'/removePiatto' +'/' + ${piatto.id}}"><span id="select">Remove</span></a>
 						</li>	   	
 					</ul>
 				</div>
 				
-				<div class="section-item" th:if="${!piattiAssenti.empty}"><strong>Vuoi aggiungere uno dei seguenti piatti al buffet?</strong>
+				<div class="section-item" th:if="${!piattiAssenti.empty}"><strong>Do you want to add some dishes in the buffet?</strong>
 					<ul>
 						<li th:each="piatto: ${piattiAssenti}">
 							<a href="piatto.html" th:href="@{'/piatto' + '/' + ${piatto.id}}"
 							   th:text="${piatto.nome}">Piatto</a>
 							<a href="#" th:href="@{'/admin' + '/buffet' + '/' + ${buffet.id} + '/add' + '/' + ${piatto.id}}">
-							<span id="select">Aggiungi al buffet</span></a>
+							<span id="select">Add to buffet</span></a>
 						</li>	   	
 					</ul>
 				</div>
 				<div>
-					<a class="section-item" id="button" href="buffet.html" th:href="@{'/buffet' + '/' + ${buffet.id}}">Conferma</a>
+					<a class="section-item" id="button" href="buffet.html" th:href="@{'/buffet' + '/' + ${buffet.id}}">Confirm</a>
 				</div>
 			</div>
 			<img src="/images/chef.jpg"></img>

@@ -3,7 +3,7 @@
 
 	<head>  	
 		<meta charset="ISO-8859-1" />
-		<title>Dettagli Chef</title>
+		<title>Chef Details</title>
 		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
 		<link rel="stylesheet" th:href="@{/css/descrizioni.css}"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,16 @@
 		<div id="sfondo-chef"></div>
 		<div id="section">
 			<div class="section-item">
-				<div><strong>Nome: </strong>
+				<div><strong>Name: </strong>
 				<span th:text="${chef.nome}">Mario</span></div>
-				<div><strong>Cognome: </strong>
+				<div><strong>Surname: </strong>
 				<span  th:text="${chef.cognome}">Rossi</span></div>
-				<div><strong>Nazionalita': </strong>
+				<div><strong>Nationality: </strong>
 				<span  th:text="${chef.nazionalita}">Italiano</span></div>
 			</div>
 			<div class="section-item" id="button">
 				<p><a th:href="@{'/chef' + '/' + ${chef.id} + '/' + 
-						'buffets'}" href="#">Consulta buffet</a>
+						'buffets'}" href="#">View his buffets</a>
 				</p>
 			</div>
 		</div>		

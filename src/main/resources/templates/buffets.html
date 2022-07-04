@@ -13,8 +13,8 @@
 		<header th:replace="fragments/base.html :: intestazione"></header>		
 		
 		<div id="container">
-			<div th:if="${chef != null}"><h1>I buffet dello chef <span th:text="${chef.nome} + ' ' + ${chef.cognome}"></span></h1></div>
-			<div th:if="${chef == null}"><h1>I nostri buffet</h1></div>
+			<div th:if="${chef != null}"><h1>Buffets of chef <span th:text="${chef.nome} + ' ' + ${chef.cognome}"></span></h1></div>
+			<div th:if="${chef == null}"><h1>Our Buffets</h1></div>
 			<div id="section">
 					<ul id="elenco">
 						<li th:each="buffet: ${buffets}">

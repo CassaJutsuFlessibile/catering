@@ -3,7 +3,9 @@
 	margin: 50px;
 	display: flex;
 	flex-direction: column;
-	padding: 40px;
+	padding: 100px;
+	text-align: center;
+	background-color: #d5ffff;
 }
 
 #section {
@@ -19,7 +21,7 @@ img {
 }
 
 #elenco {
-	font-size: 18px;
+	font-size: 50px;
 }
 
 #select {
