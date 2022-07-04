@@ -5,8 +5,11 @@
 }
 
 .text-item {
-	margin: 300px;
-	background-color: black;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 200px;
+	background-color: #80ff80;
 	opacity: 0.8;
 	border-radius: 7px;
 	padding: 50px;
@@ -38,7 +41,7 @@ a:hover .text-item {
 	background-image: url(../images/chef2.jpg);
 	width: 100%;
 	height: 100vh;
-	background-size:cover;
+	background-size: cover;
 }
 
 #servizi {
@@ -49,9 +52,9 @@ a:hover .text-item {
 }
 
 #bottoni {
-	margin: 20px;
+	margin: 200px;
 	display:flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
